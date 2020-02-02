@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editor{% endblock %}
+
+{% block body %}
+    {% for editor in editors %}
+        {{ editor.societyName }}
+        {{ editor.nationality }}
+        <a href="{{ path('editor_infos') }}">More infos</a>
+    {%endfor %}
+{% endblock %}

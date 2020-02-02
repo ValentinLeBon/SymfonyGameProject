@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Video Game{% endblock %}
+
+{% block body %}
+    {% for game in games %}
+        {{ game.title }}
+        {{ game.description }}
+        {{ game.releaseDate }}
+        <a href="{{ path('videogame_infos') }}">More infos</a>
+    {%endfor %}
+{% endblock %}

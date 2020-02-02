@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <a href="{{  path('home') }}">Home</a>
+        <a href="{{ path('editor_list') }}">List of editors</a>
+        <a href="{{ patch('videogame_list') }}">List of games</a>
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
