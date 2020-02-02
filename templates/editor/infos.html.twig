@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editor{% endblock %}
+
+{% block body %}
+        {{ editor.societyName }}
+        {{ editor.nationality }}
+    {% for game in editor.game %}
+        {{ game.title }}
+        {{ game.description }}
+        {{ game.releaseDate|date('d-m-Y') }}
+    {%endfor %}
+{% endblock %}

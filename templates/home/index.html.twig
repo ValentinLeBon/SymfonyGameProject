@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block body %}
+
+    {% for game in games %}
+        {{ game.title }}
+        {{ game.description }}
+        {{ game.releaseDate|date('d-m-Y') }}
+        {{ game.societyName }}
+    {%endfor %}
+{% endblock %}
